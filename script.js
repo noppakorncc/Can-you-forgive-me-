@@ -71,11 +71,11 @@ const createFloatingMessage = () => {
     const randomText = apologyMessages[getRandomInt(0, apologyMessages.length - 1)];
     msg.textContent = randomText;
 
-    // Random Position (Avoid center where card is)
+    
     const xPos = getRandomInt(5, 85);
     const yPos = getRandomInt(5, 85);
 
-    // Simple collision avoidance with center card area
+    
     const isCenter = (xPos > 30 && xPos < 70) && (yPos > 30 && yPos < 70);
     const finalX = isCenter ? (xPos > 50 ? 10 : 80) : xPos;
     const finalY = isCenter ? (yPos > 50 ? 10 : 80) : yPos;
@@ -83,7 +83,7 @@ const createFloatingMessage = () => {
     msg.style.left = `${finalX}%`;
     msg.style.top = `${finalY}%`;
 
-    // Random Animation Duration & Delay
+   
     const duration = getRandomInt(6, 10);
     const delay = getRandomInt(0, 3);
     msg.style.animationDuration = `${duration}s`;
@@ -91,7 +91,7 @@ const createFloatingMessage = () => {
 
     elements.floatingContainer.appendChild(msg);
 
-    // Cleanup after animation
+   
     setTimeout(() => {
         if (msg.parentNode) msg.remove();
     }, (duration + delay) * 1000);
@@ -127,23 +127,23 @@ const createFloatingMessage = () => {
          
          buttons.yes.style.transform = `scale(${state.yesScale})`;
          
-         // ทำให้ปุ่ม "ยังไม่หาย" ขยับหนีและเล็กลง
+         
          if (state.noScale <= 0.2) {
              buttons.no.style.opacity = '0';
              buttons.no.style.pointerEvents = 'none';
              elements.noText.textContent = "ยอมเถอะน่า...";
          } else {
-             // ตำแหน่งสุ่มภายในขอบเขต 10%-90% ของหน้าจอ
+            
              const margin = 0.1; // ขอบเขต 10% จากขอบจอ
              const randomX = margin + Math.random() * (1 - 2 * margin); // 0.1 ถึง 0.9
              const randomY = margin + Math.random() * (1 - 2 * margin);
              
-             // ตั้งค่าตำแหน่งแบบ fixed เพื่อให้สามารถเคลื่อนที่ได้อย่างอิสระ
+           
              buttons.no.style.position = 'fixed';
              buttons.no.style.left = `${randomX * 100}%`;
              buttons.no.style.top = `${randomY * 100}%`;
              
-             // รวมการแปลตำแหน่งและการย่อขนาดใน transform เดียวกัน
+            
              buttons.no.style.transform = `translate(-50%, -50%) scale(${state.noScale})`;
              
              if (state.noCount === 1) elements.noText.textContent = "ยังงอนอยู่";
@@ -167,7 +167,7 @@ const createFloatingMessage = () => {
          clearInterval(msgInterval);
          elements.floatingContainer.innerHTML = ''; 
          
-         // รีเซ็ตตำแหน่งปุ่ม "ยังไม่หาย" กลับสู่สถานะปกติ
+         
          buttons.no.style.position = '';
          buttons.no.style.left = '';
          buttons.no.style.top = '';
