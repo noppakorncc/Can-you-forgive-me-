@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หายโกรธนะะะ ♡</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Mitr:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-decoration">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+    
+    <!-- Particle Container -->
+    <div id="particle-container"></div>
+
+    <!-- Floating Instagram Messages Container -->
+    <div id="floating-messages" class="floating-messages"></div>
+
+    <!-- Main App Container -->
+    <main id="app">
+        
+        <!-- PAGE 1: APOLOGY -->
+        <section id="page-apology" class="page active">
+            <div class="glass-card apology-card">
+                
+                <!-- GIF Character -->
+                <div class="character-wrapper">
+                    <img src="assets/cat_01.gif" alt="หายโกรธนะ" class="apology-gif">
+                </div>
+
+                <h1 class="title">หายโกรธนะะะ</h1>
+                <p class="subtitle">ผมขอโทษน้าาา<br>อย่าโกดผมนานเลยนะ</p>
+                <p class="small-text">Please? <i class="ri-sparkling-fill"></i></p>
+
+                <div class="button-group">
+<button id="btn-yes" class="btn btn-primary" aria-label="หายแล้ว">
+    <span>😊</span>
+    <span class="visually-hidden">หายแล้ว</span>
+</button>
+                    
+<button id="btn-no" class="btn btn-secondary" aria-label="ยังไม่หาย">
+    <span>😠</span>
+    <span class="visually-hidden">ยังไม่หาย</span>
+</button>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <!-- PAGE 2: CELEBRATION -->
+        <section id="page-celebration" class="page">
+            <div class="glass-card celebration-card">
+                <!-- เพิ่ม GIF kiss.gif -->
+                <div class="character-wrapper">
+                    <img src="assets/yipee.gif" alt="คิดแล้วว่าจะต้องหายโกดด" class="celebration-gif">
+                </div>
+                <h1 class="title animate-pop">เย้ยยยย!</h1>
+                <h2 class="subtitle">หายโกรธแล้ววว <i class="ri-heart-fill"></i></h2>
+                <p class="text-body">คิดแล้วว่าจะต้องหายโกดด น่ารักที่สุดเลยยยย</p>
+
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
